@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model memorable_quote {
+  id      Int    @id @default(autoincrement())
+  content String
+  book_id Int
+  book    book   @relation(fields: [book_id], references: [id], onDelete: Cascade)
+
+  @@index([book_id])
+}
+
+model book {
+  id                Int               @id @default(autoincrement())
+  title             String?           @default("")
+  author            String?
+  publisher         String?
+  original_language String?
+  rating            Float?
+  year_published    DateTime?
+  comment_section   String?
+  started_at        DateTime          @default(now())
+  finished_at       DateTime?
+  photo_url         String?
+  user_id           String?           @db.Uuid
+  memorable_quotes  memorable_quote[]
+  user              user?             @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([user_id, started_at])
+  @@index([title])
+  @@index([author])
+}
+
+model user {
+  id          String  @id @default(uuid()) @db.Uuid
+  username    String? @unique
+  email       String  @unique
+  total_books Int     @default(0)
+  avatar_url  String?
+  books       book[]
+
+  @@index([email])
+}

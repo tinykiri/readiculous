@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "Readiculous-backend",
+      "script": "@/backend/utils/server.ts",
+      "max_memory_restart": "900M",
+      "env": {
+        "PORT": 4040,
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
