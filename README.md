@@ -108,7 +108,7 @@ See [backend/.env.example](backend/.env.example) and [mobile/.env.example](mobil
 Built with care by **@tiny.kiri**
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/tiny.kiri)
-[![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white)](https://tiktok.com/@tiny.kiri)
+[![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white)](https://tiktok.com/@tiny_kiri)
 
 ---
 
