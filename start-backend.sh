@@ -3,7 +3,7 @@
 # Script to start the backend server
 # Usage: ./start-backend.sh
 
-echo "Starting Pixel Library Backend Server..."
+echo "Starting Readiculous Backend Server..."
 echo ""
 
 cd "$(dirname "$0")/backend"
